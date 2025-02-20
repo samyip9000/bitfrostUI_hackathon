@@ -134,7 +134,11 @@ export default function SnapScrollLanding() {
           <section
             key={section.id}
             id={section.id}
-            ref={(el) => el && (sectionsRef.current[index] = el)}
+            ref={(el: HTMLDivElement) => {
+              if (el) {
+                sectionsRef.current[index] = el;
+              }
+            }}
             className="h-screen snap-start flex flex-col items-center justify-center relative"
           >
             {section.id === "create-wallet" ? (
