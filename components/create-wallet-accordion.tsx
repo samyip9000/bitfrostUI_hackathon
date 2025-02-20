@@ -42,13 +42,16 @@ export default function CreateWalletAccordion({ isOpen }: CreateWalletAccordionP
         <span className="flex items-center">
           <Link className="mr-2 h-4 w-4" />
           Connect Wallet
+
         </span>
         <span className="text-sm">{activeButton === "connect" ? "▲" : "▼"}</span>
       </Button>
       {activeButton === "connect" && (
         <div className="p-4 bg-blue-800 rounded-md">
           <p className="text-sm text-gray-300 mb-4">Connect your existing wallet to access your assets.</p>
-          <Button className="w-full bg-yellow-500 text-blue-900 hover:bg-yellow-600">Connect Existing Wallet</Button>
+          <Button className="w-full bg-yellow-500 text-blue-900 hover:bg-yellow-600 mb-4" onClick={() => window.location.href = '/wallet'}>
+            Connect Exissting wallet
+          </Button>
         </div>
       )}
     </div>

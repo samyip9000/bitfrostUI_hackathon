@@ -77,20 +77,34 @@ export default function SnapScrollLanding() {
   return (
     <div className="h-screen w-full bg-gradient-to-br from-blue-900 via-blue-800 to-blue-900 text-white overflow-hidden">
       {/* Top Left Button */}
+
       <Button
+        className="fixed top-4 left-4 z-50 bg-yellow-500 text-blue-900 hover:bg-yellow-600"
+        onClick={() => window.open("https://github.com/buildstationorg/dotui", "_blank", "noopener,noreferrer")}
+      >
+        Deploy Now
+      </Button>
+      {/* <Button
         className="fixed top-4 left-4 z-50 bg-yellow-500 text-blue-900 hover:bg-yellow-600"
         onClick={() => console.log("Deploy Now clicked")}
       >
         Deploy Now
-      </Button>
+      </Button> */}
 
       {/* Top Right Button */}
+
       <Button
+        className="fixed top-4 right-4 z-50 bg-gray-700 text-white hover:bg-gray-600"
+        onClick={() => window.open("https://github.com/buildstationorg/dotui/tree/main/docs", "_blank", "noopener,noreferrer")}
+      >
+        Docs
+      </Button>
+      {/* <Button
         className="fixed top-4 right-4 z-50 bg-gray-700 text-white hover:bg-gray-600"
         onClick={() => console.log("Docs clicked")}
       >
         Docs
-      </Button>
+      </Button> */}
 
       {/* Fixed Navigation */}
       <nav className="fixed top-16 left-1/2 -translate-x-1/2 z-40 bg-gray-800/80 backdrop-blur-sm rounded-full px-4 py-2">
